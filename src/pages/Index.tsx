@@ -4,15 +4,34 @@ import Icon from "@/components/ui/icon";
 
 const Index = () => {
   const technologies = [
-    { name: "Maltego", icon: "Network", category: "OSINT" },
-    { name: "Spiderfoot", icon: "Globe", category: "OSINT" },
-    { name: "Phoneinfoga", icon: "Phone", category: "OSINT" },
-    { name: "Sherlock", icon: "Search", category: "OSINT" },
-    { name: "Maigret", icon: "Users", category: "OSINT" },
-    { name: "theHarvester", icon: "Mail", category: "OSINT" },
-    { name: "hunter.io", icon: "Target", category: "OSINT" },
-    { name: "Recon-ng", icon: "Database", category: "OSINT" },
-    { name: "osintgram", icon: "Instagram", category: "OSINT" },
+    { name: "Maltego", icon: "Network" },
+    { name: "Spiderfoot", icon: "Globe" },
+    { name: "Phoneinfoga", icon: "Phone" },
+    { name: "Sherlock", icon: "Search" },
+    { name: "Maigret", icon: "Users" },
+    { name: "theHarvester", icon: "Mail" },
+    { name: "hunter.io", icon: "Target" },
+    { name: "Recon-ng", icon: "Database" },
+    { name: "osintgram", icon: "Instagram" },
+    { name: "Shodan", icon: "Server" },
+    { name: "Censys", icon: "Shield" },
+    { name: "ZoomEye", icon: "Eye" },
+    { name: "Wayback Machine", icon: "Clock" },
+    { name: "Datasploit", icon: "Layers" },
+    { name: "IntelX", icon: "Brain" },
+    { name: "Truecaller", icon: "PhoneCall" },
+    { name: "Passivetotal", icon: "Activity" },
+    { name: "Domaintools", icon: "Globe2" },
+    { name: "Nmap", icon: "Radar" },
+    { name: "FOFA", icon: "Scan" },
+    { name: "Telegago", icon: "Send" },
+    { name: "Exitfool", icon: "Unlock" },
+    { name: "Google Lens", icon: "Camera" },
+    { name: "Yandex Images", icon: "Image" },
+    { name: "Opencorporates", icon: "Building" },
+    { name: "Rusprofile", icon: "Building2" },
+    { name: "ORBIS/SPARK", icon: "Briefcase" },
+    { name: "DarkOwl", icon: "Moon" },
   ];
 
   return (
@@ -87,20 +106,20 @@ const Index = () => {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-12 flex items-center gap-4">
             <Icon name="Boxes" size={40} className="text-primary" />
-            OSINT инструменты
+            OSINT стек
           </h2>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
             {technologies.map((tech) => (
               <Card
                 key={tech.name}
-                className="p-6 bg-card border-border hover:border-primary hover:scale-105 transition-all duration-300 cursor-pointer group"
+                className="p-4 bg-card border-border hover:border-primary hover:scale-105 transition-all duration-300 cursor-pointer group"
               >
-                <div className="flex flex-col items-center gap-3">
-                  <div className="p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                    <Icon name={tech.icon} size={32} className="text-primary" />
+                <div className="flex flex-col items-center gap-2">
+                  <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                    <Icon name={tech.icon} size={24} className="text-primary" />
                   </div>
-                  <p className="font-semibold text-foreground">{tech.name}</p>
+                  <p className="font-semibold text-foreground text-sm text-center">{tech.name}</p>
                 </div>
               </Card>
             ))}
