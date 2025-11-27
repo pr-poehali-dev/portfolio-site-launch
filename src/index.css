@@ -48,19 +48,27 @@
     background: linear-gradient(
       -45deg,
       #000000,
+      #0d0000,
       #1a0000,
+      #4d0000,
       #8b0000,
+      #b30000,
       #ff0000,
+      #ff1a1a,
       #ff4500,
+      #ff6347,
+      #ff0000,
       #8b0000,
-      #330000,
+      #4d0000,
+      #1a0000,
       #000000
     );
-    background-size: 400% 400%;
-    animation: gradient-shift 20s ease infinite;
+    background-size: 600% 600%;
+    animation: gradient-shift 25s ease infinite;
     color: hsl(var(--foreground));
     min-height: 100vh;
     position: relative;
+    overflow-x: hidden;
   }
 
   body::before {
@@ -72,22 +80,52 @@
     bottom: 0;
     background:
       radial-gradient(
-        circle at 20% 50%,
-        rgba(255, 0, 0, 0.1) 0%,
+        ellipse at 10% 30%,
+        rgba(255, 0, 0, 0.25) 0%,
+        transparent 40%
+      ),
+      radial-gradient(
+        ellipse at 90% 70%,
+        rgba(139, 0, 0, 0.3) 0%,
+        transparent 45%
+      ),
+      radial-gradient(
+        ellipse at 50% 90%,
+        rgba(255, 69, 0, 0.2) 0%,
         transparent 50%
       ),
       radial-gradient(
-        circle at 80% 80%,
-        rgba(139, 0, 0, 0.15) 0%,
-        transparent 50%
+        circle at 30% 60%,
+        rgba(255, 26, 26, 0.25) 0%,
+        transparent 35%
       ),
       radial-gradient(
-        circle at 40% 20%,
-        rgba(255, 69, 0, 0.1) 0%,
-        transparent 50%
+        circle at 70% 20%,
+        rgba(179, 0, 0, 0.22) 0%,
+        transparent 40%
       );
     pointer-events: none;
     z-index: 0;
+    animation: pulse-glow 8s ease-in-out infinite;
+  }
+
+  body::after {
+    content: "";
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 100px,
+      rgba(255, 0, 0, 0.04) 100px,
+      rgba(255, 0, 0, 0.04) 200px
+    );
+    pointer-events: none;
+    z-index: 0;
+    animation: rotate-pattern 60s linear infinite;
   }
 
   body > * {
@@ -110,6 +148,25 @@
     }
     100% {
       background-position: 0% 50%;
+    }
+  }
+
+  @keyframes pulse-glow {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+
+  @keyframes rotate-pattern {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
     }
   }
 
