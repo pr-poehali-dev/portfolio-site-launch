@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Icon from "@/components/ui/icon";
+import Particles from "@/components/Particles";
 
 const Index = () => {
   const technologies = [
@@ -36,6 +37,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Particles />
       <section className="min-h-screen flex items-center justify-center px-6 animate-fade-in">
         <div className="max-w-4xl text-center">
           <h1 className="text-6xl md:text-8xl font-black mb-6 bg-gradient-to-r from-red-600 via-red-500 to-red-400 bg-clip-text text-transparent">
