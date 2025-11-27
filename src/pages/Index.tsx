@@ -45,7 +45,7 @@ const Index = () => {
             hellcitiv • fxckid • spy
           </p>
           <p className="text-lg text-foreground/80 max-w-2xl mx-auto leading-relaxed">
-            Создаю современные веб-приложения с фокусом на UX и производительность
+            занимаюсь сбором информации, специализируюсь в разведывательной дисциплине Open Source Intelligence
           </p>
         </div>
       </section>
