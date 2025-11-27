@@ -128,6 +128,36 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <section className="py-20 px-6 pb-32">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-12 flex items-center gap-4">
+            <Icon name="Mail" size={40} className="text-primary" />
+            Контакты
+          </h2>
+          
+          <Card className="p-8 bg-card border-border hover:border-primary/50 transition-all duration-300">
+            <div className="space-y-4 text-lg">
+              <p className="text-foreground/90">
+                <span className="font-bold text-primary">Email:</span>{" "}
+                <a href="mailto:fxckid@proton.me" className="font-bold hover:text-primary transition-colors">
+                  fxckid@proton.me
+                </a>
+              </p>
+              <p className="text-foreground/90">
+                <span className="font-bold text-primary">Telegram:</span>{" "}
+                <a href="https://t.me/hellcitiv" target="_blank" rel="noopener noreferrer" className="font-bold hover:text-primary transition-colors">
+                  @hellcitiv
+                </a>
+              </p>
+              <p className="text-foreground/90">
+                <span className="font-bold text-primary">Discord:</span>{" "}
+                <span className="font-bold">fxckid</span>
+              </p>
+            </div>
+          </Card>
+        </div>
+      </section>
     </div>
   );
 };
