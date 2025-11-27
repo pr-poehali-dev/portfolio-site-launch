@@ -19,11 +19,11 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <section className="min-h-screen flex items-center justify-center px-6 animate-fade-in">
         <div className="max-w-4xl text-center">
-          <h1 className="text-6xl md:text-8xl font-black mb-6 bg-gradient-to-r from-primary via-purple-400 to-pink-500 bg-clip-text text-transparent">
-            Иван Иванов
+          <h1 className="text-6xl md:text-8xl font-black mb-6 bg-gradient-to-r from-red-600 via-red-500 to-red-400 bg-clip-text text-transparent">
+            Maniacitive
           </h1>
           <p className="text-2xl md:text-3xl text-muted-foreground mb-8">
-            Fullstack разработчик
+            hellcitiv • fxckid • spy
           </p>
           <p className="text-lg text-foreground/80 max-w-2xl mx-auto leading-relaxed">
             Создаю современные веб-приложения с фокусом на UX и производительность
