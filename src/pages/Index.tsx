@@ -4,15 +4,15 @@ import Icon from "@/components/ui/icon";
 
 const Index = () => {
   const technologies = [
-    { name: "React", icon: "Code2", category: "Frontend" },
-    { name: "TypeScript", icon: "FileCode", category: "Frontend" },
-    { name: "Tailwind CSS", icon: "Palette", category: "Frontend" },
-    { name: "Node.js", icon: "Server", category: "Backend" },
-    { name: "Python", icon: "Binary", category: "Backend" },
-    { name: "PostgreSQL", icon: "Database", category: "Backend" },
-    { name: "Git", icon: "GitBranch", category: "Tools" },
-    { name: "Docker", icon: "Container", category: "Tools" },
-    { name: "VS Code", icon: "Code", category: "Tools" },
+    { name: "Maltego", icon: "Network", category: "OSINT" },
+    { name: "Spiderfoot", icon: "Globe", category: "OSINT" },
+    { name: "Phoneinfoga", icon: "Phone", category: "OSINT" },
+    { name: "Sherlock", icon: "Search", category: "OSINT" },
+    { name: "Maigret", icon: "Users", category: "OSINT" },
+    { name: "theHarvester", icon: "Mail", category: "OSINT" },
+    { name: "hunter.io", icon: "Target", category: "OSINT" },
+    { name: "Recon-ng", icon: "Database", category: "OSINT" },
+    { name: "osintgram", icon: "Instagram", category: "OSINT" },
   ];
 
   return (
@@ -38,14 +38,47 @@ const Index = () => {
             Обо мне
           </h2>
           <Card className="p-8 bg-card border-border hover:border-primary/50 transition-all duration-300">
-            <p className="text-lg text-foreground/90 leading-relaxed mb-4">
-              Привет! Я увлечённый разработчик с опытом создания масштабируемых веб-приложений. 
-              Люблю решать сложные задачи и превращать идеи в работающие продукты.
+            <p className="text-lg text-foreground/90 leading-relaxed mb-6">
+              Приветствую, мой псевдоним — <span className="text-primary font-semibold">hellcitiv</span>. Я специализируюсь в разведывательной дисциплине Open Source Intelligence, также в сборе персональных и прочих информации о разных личностях, инфраструктурах, компаниях.
             </p>
-            <p className="text-lg text-foreground/90 leading-relaxed">
-              В своей работе ценю чистый код, архитектуру и внимание к деталям. 
-              Всегда открыт к новым технологиям и готов делиться знаниями с командой.
+            <p className="text-lg text-foreground/90 leading-relaxed mb-8">
+              Мой OSINT стек состоит из таких инструментов как: Maltego, Spiderfoot, Phoneinfoga, Sherlock, Maigret, Holehe, theHarvester, John, hunter.io, Recon-ng, tracker, vkhistoryrobot, telelog, findHomo, dorkleak, Ihavebeenpwned, osintgram и т/д.
             </p>
+            
+            <h3 className="text-2xl font-bold mb-6 text-primary">Мои услуги</h3>
+            <div className="space-y-4">
+              <div className="p-4 bg-background/50 rounded-lg border border-border">
+                <p className="text-foreground/90 mb-2">
+                  <span className="font-semibold text-primary">Сбор информации о ком-то</span>
+                </p>
+                <p className="text-muted-foreground">Стоимость: от $30 до $100</p>
+              </div>
+              
+              <div className="p-4 bg-background/50 rounded-lg border border-border">
+                <p className="text-foreground/90 mb-2">
+                  <span className="font-semibold text-primary">Сбор информации о инфраструктуре</span>
+                </p>
+                <p className="text-muted-foreground">Стоимость: от $50 до $200</p>
+              </div>
+              
+              <div className="p-4 bg-background/50 rounded-lg border border-border">
+                <p className="text-foreground/90 mb-2">
+                  <span className="font-semibold text-primary">Урок по анонимизации в интернете</span>
+                </p>
+                <p className="text-muted-foreground">Как оставаться максимально невидимым, без следов — $12</p>
+              </div>
+              
+              <div className="p-4 bg-background/50 rounded-lg border border-border">
+                <p className="text-foreground/90 mb-2">
+                  <span className="font-semibold text-primary">OSINT-курс, обучение профессиональное</span>
+                </p>
+                <p className="text-muted-foreground mb-2">
+                  Научитесь использовать профессиональные инструменты, такие как: Maltego, Spiderfoot. 
+                  Обучение сбору информации, аналитике, поведенческому анализу, как совмещать разбросанные следы в один граф и найти что нужно.
+                </p>
+                <p className="text-muted-foreground">Стоимость: $70</p>
+              </div>
+            </div>
           </Card>
         </div>
       </section>
@@ -54,33 +87,22 @@ const Index = () => {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-12 flex items-center gap-4">
             <Icon name="Boxes" size={40} className="text-primary" />
-            Технологии и инструменты
+            OSINT инструменты
           </h2>
           
-          <div className="space-y-12">
-            {["Frontend", "Backend", "Tools"].map((category) => (
-              <div key={category}>
-                <Badge variant="outline" className="mb-6 px-4 py-2 text-base border-primary/50">
-                  {category}
-                </Badge>
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                  {technologies
-                    .filter((tech) => tech.category === category)
-                    .map((tech) => (
-                      <Card
-                        key={tech.name}
-                        className="p-6 bg-card border-border hover:border-primary hover:scale-105 transition-all duration-300 cursor-pointer group"
-                      >
-                        <div className="flex flex-col items-center gap-3">
-                          <div className="p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                            <Icon name={tech.icon} size={32} className="text-primary" />
-                          </div>
-                          <p className="font-semibold text-foreground">{tech.name}</p>
-                        </div>
-                      </Card>
-                    ))}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {technologies.map((tech) => (
+              <Card
+                key={tech.name}
+                className="p-6 bg-card border-border hover:border-primary hover:scale-105 transition-all duration-300 cursor-pointer group"
+              >
+                <div className="flex flex-col items-center gap-3">
+                  <div className="p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                    <Icon name={tech.icon} size={32} className="text-primary" />
+                  </div>
+                  <p className="font-semibold text-foreground">{tech.name}</p>
                 </div>
-              </div>
+              </Card>
             ))}
           </div>
         </div>
